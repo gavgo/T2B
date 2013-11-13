@@ -1,0 +1,579 @@
+/* ==========================================================================
+Tiles2buy - Store - Colors Blue:#0070BB; Orange:#FF6300;
+Layout & Default Styles
+========================================================================== */
+*, *:before, *:after {box-sizing: border-box; -moz-box-sizing: border-box; margin:0; padding:0;}
+body{
+background:#77B3DB url(../img/bg.png) repeat center ;
+width:100%;
+height:100%;
+}
+#wrap{
+width:960px;
+margin:0 auto;
+background-color: white;
+padding:20px;
+font-family:"open sans",helvetica,arial,sans-serif;	
+font-weight:400;
+color:#555;
+box-shadow:0 0 15px #0070BB;
+font-size:95%;
+font-size:90%\9; /*IE < 8 Fix*/
+}
+h1{font-size:200%; background:url(../img/t2b-sprite.png) no-repeat; height:50px; width:270px;text-indent: -9999px;float:left;}
+h2{font-size:150%; color:#0070BB; font-weight:400;}
+h3{font-size:125%; font-weight:300;color:#0070BB;}
+p{margin:10px 0;line-height:1.7;}
+a{color:#0070BB; text-decoration:none;}
+a:hover{border-bottom:1px solid #0070BB;}
+ul ,li{list-style-type: none; padding:0; margin:0;}
+
+/* ==========================================================================
+Header
+========================================================================== */
+
+header{
+height:52px;
+}
+
+#callus{float:left; padding:0 15px;width:400px;}
+#callus h3{text-align:center; font-size:120%; line-height:1;}
+#tel i{
+height:23px;
+width:40px;
+background: url(../img/t2b-sprite.png) no-repeat -148px -122px;
+display:inline-block;
+*vertical-align:middle; /*IE 7 Fix*/
+}
+#tel{
+font-size:200%;
+font-size:195%\9; /*IE < 8 Fix*/
+line-height:1;
+float:left; 
+}
+#callus b{
+color:#FF6300;
+}
+.otimes{
+float:right;
+margin-top:3px;
+*margin-top:8px; /*IE 7 Fix*/
+}
+.otimes p{
+margin:0;
+font-size:75%;
+width:123px;
+line-height:1.1;
+color:#0070BB;
+}
+
+form{ display:inline-block;
+
+}
+input[type="text"]{
+border:1px solid #dedede;
+width:212px;
+height:39px;
+line-height:39px\9; /*IE < 8 Fix*/
+padding-left:5px;
+color:#555;
+}
+
+input[type="text"]:focus{
+border:1px solid #FF6300;
+}
+
+input[type="submit"]{
+background:url(../img/t2b-sprite.png) -212px 72px #FF6300;
+text-indent:-9999px;
+*text-transform:uppercase; /*IE 7 Fix*/
+border:0;
+margin-left:-6px;
+width:40px;
+height:39px;
+transition:all 0.3s;
+vertical-align: bottom\9; /*IE < 8 Fix*/
+}
+input:focus{outline:none;}
+input[type="submit"]:hover{background-color:#DB5500;}
+
+/* ==========================================================================
+Nav
+========================================================================== */
+
+nav{
+margin:10px 0;
+}
+
+nav ul{
+float:left;
+}
+
+nav ul li{
+float:left;
+background:#FF6300;
+border-right:1px solid white;
+height:40px;
+}
+
+nav ul li a{
+vertical-align: top;
+display:block;
+color:white; 
+padding:9px;
+text-shadow:2px 1px rgb(233, 56, 0);
+transition:all 0.3s;
+height:inherit;
+width:100%;}
+
+nav ul li a i{
+background:url(../img/t2b-sprite.png) -212px -51px no-repeat;
+display:inline-block;
+height:19px;
+width:45px;
+float:left;
+}
+
+
+nav ul li a:hover{
+background-color: #DB5500;
+border-bottom:none;
+}
+nav ul li:last-child{
+border-right:none;
+}
+nav ul li:last-child a{
+padding:9px 16px;
+}
+
+.superbar{
+padding: 5px 5px 15px 0px;
+vertical-align: top;
+}
+
+.superbar li{
+float:left;
+padding-left:15px;
+}
+.superbar li b{color:#FF6300;}
+
+.superbar li p{
+text-transform: uppercase;
+color:#0070BB;
+font-size:90%;
+display:inline-block;
+*display:inline;
+zoom:1;
+margin:0;
+padding-left:10px;
+height:100%;
+vertical-align:top;
+margin-top:2px;
+font-style: italic;
+
+}
+
+.superbar li span{
+background-image:url(../img/t2b-sprite.png);
+display:inline-block;
+height:24px; width:42px;
+}
+
+.truck{background-position:-1px 26px;}
+.exc{background-position:-45px 25px;}
+.unbeat{background-position:-93px 26px; width:30px;}
+
+/* ==========================================================================
+img Section
+========================================================================== */
+
+#imgsec{
+width:550px;
+float:left;
+position: relative;
+
+}
+
+#imgsec span{
+position: absolute;
+top:20px;
+right:20px;
+background: url("../img/t2b-sprite.png") no-repeat 0px -53px;
+height:65px;
+width:209px;
+text-indent: -9999px;
+text-transform:uppercase; /*IE 7 Fix*/
+}
+#imgsec ul {
+margin:5px 0;
+}
+
+#imgsec ul li{
+float:left;
+padding-right:14px;
+}
+#imgsec ul li img{
+border:2px solid white;
+}
+
+#imgsec ul li img:hover{
+cursor:pointer;
+border:2px solid #FF6300;
+}
+
+#imgsec ul li:last-child{
+padding-right:0;
+}
+#imgsec ul li img{
+height:80px;
+width:80px;
+}
+
+
+/* ==========================================================================
+Modals
+========================================================================== */
+
+.modal{
+background:white;
+z-index: 9999;
+margin:0 auto;
+min-height:275px;
+width:500px;
+position: absolute;
+top:150px;
+right:35%;
+padding:20px;
+box-shadow:0 0 10px rgba(0,0,0,0.3) ;
+border-radius:3px;
+display:none;
+}
+
+.close{
+position: absolute;
+top:10px;
+right:15px;
+font-weight:700;
+font-size:125%;
+color:#FF6300;
+cursor:pointer;
+transition:all 0.3s;
+}
+
+.close:hover{
+color:#555;
+}
+
+.tile_modal{
+}
+
+.calcinp{ text-align:center;
+font-size:125%;
+
+}
+.calcinp  span{ 
+margin-right:10px;
+display:inline-block;
+}
+.calcinp a span{
+	margin: 10px 5px;
+	border:1px solid #FF6300;
+	background-color: #FF6300;
+	height:20px;
+	width:20px;
+	line-height: 18px;
+	color:white;
+	font-weight: 700;
+}
+.remove{
+cursor:pointer;
+color:#C2C2C2;
+font-weight:700;
+font-size:80%;
+font-family:arial black,"open sans",arial,sans-serif;
+}
+
+.remove:hover{
+color:red;
+}
+
+.calcinp input{
+width:70px;
+margin-right:5px;
+text-align: center;
+}
+
+.calcinp a{
+display:block;
+margin: 20px 0;
+transition:all 0.3s;
+color:#FF6300;
+}
+
+.calcinp a:hover{
+text-decoration: underline;
+border-bottom: none;
+}
+
+.greenbut{
+padding:10px 15px;
+border:none;
+background-color:#07B907;
+color:white;
+font-size:90%;
+box-shadow:0 2px 2px rgba(0, 0, 0, 0.6);
+border-radius: 2px;
+transition:all 0.3s;
+text-shadow:1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.greenbut:active{
+	outline:none;
+}
+
+.greenbut:hover{
+    background-color:#0BAD0B;
+}
+
+
+.wfinput{
+border: 1px solid #dedede;
+padding:10px;
+margin:0 auto;
+text-align: center;
+margin:10px 0;
+}
+
+.wfinput label{
+text-transform: uppercase;
+font-weight:700;
+font-size: 80%;
+margin-right:10px;
+color:#0070BB;
+}
+.wfinput:first-child{
+text-align: left;
+padding-left:42px;
+}
+
+.wfinput:first-child span.remove{
+display:none;
+}
+#error{
+display:none;
+}
+#area{
+display:none;
+color:red;
+}
+
+#area p{
+ font-size: 175%;
+}
+
+#area span{
+	display:block;
+	width:100%;
+	text-align: center;
+	font-size: 400%;
+	font-weight:700;
+}
+
+
+
+/* ==========================================================================
+Tile Section
+========================================================================== */
+
+#tilesec{
+padding:15px;
+float:right;
+width:370px;
+font-size: 90%;
+}
+
+#tilesec > p{
+margin-bottom: 20px;
+}
+
+.thelpers{
+text-transform: uppercase;
+font-weight: 700;
+line-height: 1.5;
+vertical-align: top;
+margin-left: 5px;
+}
+
+#tilesec i{
+background:url(../img/t2b-sprite.png) no-repeat;
+display:inline-block;
+}
+
+#tilesec i.tcalc{
+background-position: -201px -122px;
+height:22px;
+width:19px;
+}
+
+#tilesec i.samp{
+background-position: -244px -122px;
+height:22px;
+width:26px;
+margin-left:10px;
+}
+
+
+/*Tile Table*/
+table{
+width:100%;
+font-size:95%;
+margin:17px 0 16px 0;
+}
+table tr{
+border:1px solid #ddd;
+
+}
+
+table tr:nth-child(odd){
+background:#f3f3f3;
+}
+
+table th{
+border-right:1px solid #d6d6d6;
+text-align:left;
+padding:10px;
+text-transform: uppercase;
+font-weight:600;
+color:#0070BB;
+}
+
+table td{
+padding:10px;
+}
+
+/* ==========================================================================
+Buy box
+========================================================================== */
+
+#buybox{
+border:1px solid #d4d4d4;
+padding:10px;
+width:100%;
+}
+
+#buybox div p{
+margin:-5px 0;
+color:red;
+}
+
+#buybox div{
+float:left;
+width:50%;
+margin-right:10%;
+}
+
+#price{
+color:red;
+font-weight:700;
+font-size:350%;
+}
+#rrp{font-size:110%; margin:20px 0 0 0; font-style:italic;}
+#save{
+font-size:120%;
+text-transform:uppercase;
+color:#75d124;
+font-weight:600;
+margin-top:0;
+}
+
+#perc,#dtext{font-style: italic;}
+#perc{color:#75d124;}
+#perc b{text-transform: uppercase;}
+#dtext{
+margin-top: 0;
+color:#0070BB;
+}
+
+/* ==========================================================================
+tabs
+========================================================================== */
+
+#tabs{
+margin:30px 0;
+}
+
+#tabs > ul li{
+float:left;
+}
+
+#tabs ul li a{
+padding:10px 25px;
+color:#FF6300;
+display:block;
+}
+
+#tabs ul li a:hover{
+background: #FF6300;
+color:white;
+border-bottom:0;
+text-shadow:2px 1px rgb(233, 56, 0);
+}
+#tabs div.active{
+min-height:400px;
+display:block;
+border:1px solid #d4d4d4;
+}
+
+#tabs ul li a.active {
+background: #FF6300;
+color:white; 
+border-bottom:0;
+text-shadow:2px 1px rgb(233, 56, 0);
+}
+
+#tabs div{
+display:none;
+min-height:400px;
+border:1px solid #d4d4d4;
+padding:20px;
+}
+
+#tabs div ul li:before{
+content:"\25A0";
+color:#0070BB;
+position:relative;
+padding-right:10px;
+font-size:60%;
+top:-3px;
+}
+
+#tabs div ul li{
+margin:10px 0;
+}
+
+
+/* ==========================================================================
+    ie fixes
+========================================================================== */
+
+.lt-ie8{
+
+}
+
+/* ==========================================================================
+Helper classes
+========================================================================== */
+
+.clr:before,
+.clr:after {
+content: "";
+display: table;
+}
+
+.clr:after {
+clear: both;
+}
+
+.clr {
+*zoom: 1;
+}
