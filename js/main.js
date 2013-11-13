@@ -1,3 +1,5 @@
+(function($){
+
 // tabs
 var pageTab = $('#tabs div'),
 	tab = $('#tabs ul li a');
@@ -30,17 +32,20 @@ liLoop.each(function(){
   $(this).remove();}
 });
 
-//modal box
-function modal(obj){
+//modal boxs
 	var tModal = $(".tilesmodal"),
 		sModal = $(".sampmodal");
-	if($(obj).data("tmodal") !== undefined){
-		tModal.fadeIn(300); 
-	}
-	else{
-		sModal.fadeIn(300);
-	}
-};
+		$('.thelpers').on('click', function(e) {		
+			e.preventDefault();
+			if($(this).data("tmodal") !== undefined){
+			tModal.fadeIn(300); 
+			}
+		else{
+			sModal.fadeIn(300);
+		}
+		calcBack(); // Returns Calc box back to wall and floors Panel
+	});
+
 
 //close Modal/remove wall and floor inputs
 $(".close,.remove").on('click', function (e) {
@@ -65,12 +70,28 @@ but.on('click',function (e) {
 	cloneEl.insertAfter(lstEl);
 })
 
-//Tile Calculator Workings
-function calc(){
+
+// Calc Button
+$('.calcinp button.greenbut').on('click', function(e) {
+	e.preventDefault();
 	var w = $("input.width"),
-    h = $("input.height"),
-    tw = 0,
-    hw = 0;
+   		h = $("input.height");
+
+	calc(h,w);
+
+});
+
+//Calc Back
+$('#area a').on('click', function(e) {
+	e.preventDefault();
+	calcBack();
+});
+
+
+//Tile Calculator Workings
+function calc(h,w){
+	var tw = 0,
+    	hw = 0;
   for(i=0; i < w.length; i++){
   tw += parseInt(w[i].value);
    };
@@ -99,3 +120,5 @@ function calcBack(){
 	$("#area").hide();
 	$(".calcinp > *").not('#error').fadeIn(300);
 }
+
+})(jQuery);
